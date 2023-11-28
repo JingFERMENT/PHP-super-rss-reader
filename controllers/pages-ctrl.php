@@ -1,31 +1,36 @@
 <?php
 // L'URL du flux RSS à lire
 $url = 'https://www.lemonde.fr/europe/rss_full.xml';
-// Création d'un objet DOM à partir du flux RSS
-$dom = new DOMDocument();
-$dom->load($url);
-// Récupération de la liste des éléments du flux
-$items = $dom->getElementsByTagName('item');
-// Parcours de la liste des éléments
-foreach ($items as $item) {
-    // Récupération de l'élément title
-    $title = $item->getElementsByTagName('title')[0]->nodeValue;
-    // Récupération de l'élément link
-    $link = $item->getElementsByTagName('link')[0]->nodeValue;
-    // Récupération de l'élément description
-    $description = $item->getElementsByTagName('description')[0]->nodeValue;
-    // Récupération de l'élément media:content ou media:thumbnail
-    // Utilisez l'URI correct de l'espace de noms pour 'media'
-    $mediaContents = $item->getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content');
-    $imageUrl = null;
-    if ($mediaContents->length > 0) {
-        $imageUrl = $mediaContents[0]->getAttribute('url');
-    }
+
+// Chargement du flux RSS avec SimpleXML
+// simplexml_load_file — Convertit un fichier XML en objet
+$rss = simplexml_load_file($url);
+
+// Parcours des éléments du flux
+foreach ($rss->channel->item as $item) {
+    // Récupération du titre, du lien et de la description
+    $title = $item->title;
+    $link = $item->link;
+    $description = $item->description;
+
     // Affichage des informations
     echo "<h2>$title</h2><br>";
     echo $description."<br>";
-    if ($imageUrl) {
-        echo "<img src='$imageUrl' alt='Image'><br>";
+
+    // Gestion des erreurs, variable pour le tableau des erreurs?
+    // Récupération et affichage de l'image (si présente)
+    $namespaces = $item->getNameSpaces(true);
+    $media = $item->children($namespaces['media']);
+    if (!empty($media->content)) {
+        $imageUrl = $media->content->attributes()->url;
+        //regex à revoir si il faut contrôler le type MIME
+        if (filter_var($imageUrl, FILTER_VALIDATE_URL) && preg_match('/\.(jpg|jpeg|png)$/', $imageUrl)) {
+            // Nettoyage de l'URL pour éviter les injections de code
+            $cleanImageUrl = htmlspecialchars($imageUrl, ENT_QUOTES, 'UTF-8');
+            echo "<img src='$cleanImageUrl' alt='Image'><br>";
+        } else {
+            echo "<p>Image non valide ou format non supporté.</p>";
+        }
     }
 }
 ?>
