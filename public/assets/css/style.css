@@ -65,6 +65,9 @@ main{
 .navbar button:first-child a{ /* bouton paramètres */
     color: #FFF !important;
 }
+.navbar button:first-child i{ /* bouton paramètres */
+    color: #FFF !important;
+}
 
 /* ! main */
 #main__pic{
