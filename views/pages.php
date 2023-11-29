@@ -18,7 +18,7 @@ for ($i = 0; $i < $maxArticles && $i < count($items); $i++) {
     // $title - $formattedDate - $description - $link - $imageUrl
 ?>
     <div class="card" style="width: 18rem;">
-        <img src="<?= $imageUrl ?>" class="card-img-top img-fluid" alt="...">
+        <img src="<?= $imageUrl ?>" class="card-img-top img-fluid" alt="Photo illustration de l'article">
         <div class="card-body">
             <h5 class="card-title"><?= $title ?></h5>
             <p><?= $formattedDate ?></p>
