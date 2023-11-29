@@ -1,11 +1,9 @@
 <?php
 require_once __DIR__ . '/../controllers/pages-ctrl.php';
 // $title - $formattedDate - $description - $link - $imageUrl
-$count = 0;
-foreach ($rss->channel->item as $item) {
-    if ($count >= 6) {
-        break;
-    }
+
+for ($i = 0; $i < $maxArticles && $i < count($items); $i++) {
+    $item = $items[$i];
     $title = $item->title;
     $link = $item->link;
     $description = $item->description;
@@ -32,6 +30,5 @@ foreach ($rss->channel->item as $item) {
         </div>
     </div>
 <?php
-    $count++;
 }
 ?>
