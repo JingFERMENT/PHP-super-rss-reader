@@ -1,3 +1,40 @@
+<?php
+define('TOPICS', ['Sujet 1', 'Sujet 2', 'Sujet 3', 'Sujet 4', 'Sujet 5']);
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $error = [];
+
+    ////////////// INPUT "Nombre d’articles affichés"
+    $numberItems = intval(filter_input(INPUT_POST, 'numberItems', FILTER_SANITIZE_NUMBER_INT));
+    if (empty($numberItems)) {
+        $error['numberItems'] = "Merci de sélectionner le nombre d'actualités à afficher";
+    } else {
+        $isOk = filter_var($numberItems, FILTER_VALIDATE_INT, array("options" => array("min_range" => 6, "medium_range" => 9, "max_range" => 12)));
+        if (!$isOk) {
+            $error["numberItems"] = "La sélection n'est pas valide";
+        } else {
+            setcookie('numberItems', $_POST['numberItems'], (time() + 365 * 24 * 3600), '/');
+        }
+    }
+
+    ////////////// INPUT selectedTopics "Selectionnez vos sujets"
+    $selectedTopics = filter_input(INPUT_POST, 'topic', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
+    if (empty($selectedTopics)) {
+        $error['numberItems'] = "Merci de sélectionner 3 sujets";
+    } else {
+        foreach ($selectedTopics as $value) {
+            // Vérification si la valeur de mon tableau 'selectedTopics' est dans mon tableau 'TOPICS'
+            if ($value < 0 || !in_array($value, TOPICS)) {
+                $error['selectedTopics'] = "La valeur sélectionnée n'est pas valide.";
+            } else {
+                setcookie('selectedTopics', $_POST['selectedTopics'], (time() + 365 * 24 * 3600), '/');
+            }
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,7 +48,7 @@
 <body>
     <div class="row justify-content-center">
         <div class="col-lg-6">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="p-5">
+            <form method="POST">
                 <!-- INPUT Radio Nombre d’articles -->
                 <div class="mb-5">
                     <p>Nombre d’articles affichés sur la page d’accueil et sur les pages complètes</p>
@@ -30,16 +67,15 @@
                     <small class="form-text text-danger"><?= $error['numberItems'] ?? '' ?></small>
                 </div>
 
-
                 <!-- INPUT Checkbox Sujet -->
                 <div class="mb-5">
                     <label class="mt-3">Selectionnez vos sujets : </label>
                     <?php
-                    foreach (TOPICS as $value) {
+                    foreach (TOPICS as $key => $value) {
                     ?>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="selectedTopics[]" id="<?= $value ?>" value="<?= $value ?>" <?= (isset($selectedTopics) && in_array($value, $selectedTopics)) ? 'checked' : '' ?>>
-                            <label class="form-check-label" for="<?= $value ?>">
+                            <input class="form-check-input" type="checkbox" name="topic[]" id="topic<?= $key ?>" value="<?= $key ?>" <?= (isset($selectedTopics) && in_array($key, $selectedTopics)) ? 'checked' : '' ?>>
+                            <label class="form-check-label" for="topic<?= $key ?>">
                                 <?= $value ?>
                             </label>
                         </div>
@@ -51,9 +87,6 @@
                 <!-- Bouton de validation -->
                 <button type="submit" class="btn btn-primary mb-2">Je valide</button>
             </form>
-
-                <p><?= $_COOKIE['numberItems'] ?? 'Aucun cookie'?></p>           
-                <p><?= $_COOKIE['selectedTopics'] ?? 'Aucun cookie'?></p>
 
         </div>
     </div>
