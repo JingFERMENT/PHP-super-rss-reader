@@ -1,3 +1,9 @@
+/* <!-- -------------------------------- -->
+<!-- ------------BRANCH HOME------------ -->
+<!-- ----------------------------------- --> */
+
+
+
 /********** Home style ***********/
 
 *{
@@ -76,7 +82,6 @@ main{
     background-size: cover;
     background-position: 50% 60%;
     height: 60vh;
-    /* mix-blend-mode: luminosity; */
 }
 #overlay{
     height: 100%;
@@ -147,4 +152,28 @@ footer h5{
 }
 
 
+/* ! pages */
+#pages__pic{
+    background-image: url('/public/assets/img/photo\ de\ journal\ cafe\ lunettes.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 74%;
+    height: 40vh;
+}
+#pages__overlay{
+    height: 100%;
+    background-color: rgba(71, 103, 189, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /********************************/
+
+
+
+
+/* <!-- -------------------------------- -->
+<!-- ------------BRANCH HOME------------ -->
+<!-- ----------------------------------- --> */
