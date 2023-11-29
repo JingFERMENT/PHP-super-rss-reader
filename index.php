@@ -241,7 +241,7 @@
 
 <footer>
     <div class="container">
-        <div class="row pt-5"> <!-- logos -->
+        <div class="row pt-5 test"> <!-- logos -->
             <div class="col ps-md-5 ms-md-5" id="footer__logo--desktop">
                 <img class="ps-md-5 ms-md-5" id="footer__logo" src="/public/assets/img/White_logo.png" alt="">
             </div>

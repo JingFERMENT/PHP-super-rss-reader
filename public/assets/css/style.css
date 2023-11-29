@@ -136,6 +136,12 @@ footer h5{
         text-align: center;
     }
 }
+@media (min-width: 768px) and (max-width: 990px) {
+    #footer__logosreaseaux--desktop{
+        width: 300px;
+        text-align: center;
+    }
+}
 
 
 /********************************/
