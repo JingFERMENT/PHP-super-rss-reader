@@ -7,6 +7,6 @@ $rss = simplexml_load_file($url);
 $items = $rss->channel->item;
 // Variable pour le réglage de l'affichage
 $maxArticles = 6;
-
-require_once __DIR__ . '/../views/pages.php';
-// $title - $formattedDate - $description - $link - $imageUrl
+include __DIR__ . '/../views/templates/header.php';
+include __DIR__ . '/../views/pages.php';
+include __DIR__ . '/../views/templates/footer.php';

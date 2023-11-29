@@ -14,18 +14,18 @@ for ($i = 0; $i < $maxArticles && $i < count($items); $i++) {
     $namespaces = $item->getNameSpaces(true);
     $media = $item->children($namespaces['media']);
     $imageUrl = $media->content->attributes()->url;
-    // Affichage des informations Europe
+    // Affichage des informations
     // $title - $formattedDate - $description - $link - $imageUrl
 ?>
-    <div class="card" style="width: 18rem;">
+    <div class="card">
         <img src="<?= $imageUrl ?>" class="card-img-top img-fluid" alt="Photo illustration de l'article">
         <div class="card-body">
             <h5 class="card-title"><?= $title ?></h5>
             <p><?= $formattedDate ?></p>
             <p class="card-text"><?= $description ?></p>
-            <a href="<?= $link ?>" class="btn btn-primary">Go somewhere</a>
+            <a href="<?= $link ?>" class="btn btn-primary">Lien vers l'article</a>
         </div>
-    </div>
+    </div><br>
 <?php
 }
 ?>
