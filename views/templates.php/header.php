@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg bg-body-light sticky-top">
         <div class="container-fluid d-flex justify-content-center">
                 <a class="navbar-brand ps-md-5 ms-md-4 pe-5 pe-md-0" href="#"><img id="logo-white" class="ps-md-5 position-absolute z-1" src="/public/assets/img/White_logo.png" alt="logo CKJN light"><img class="ps-md-5 position-relative" id="navbar__logo--dark" src="/public/assets/img/Black_logo.png" alt="logo CKJN dark"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
