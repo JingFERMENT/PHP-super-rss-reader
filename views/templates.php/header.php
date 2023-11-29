@@ -20,12 +20,12 @@
 </head>
 
 
-<body>
+<body class="light">
 <header>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-body-light sticky-top">
         <div class="container-fluid d-flex justify-content-center">
-                <a class="navbar-brand ps-md-5 ms-md-4 pe-5 pe-md-0" href="#"><img class="ps-md-5" src="/public/assets/img/White_logo.png" alt="logo CKJN light"></a>
+                <a class="navbar-brand ps-md-5 ms-md-4 pe-5 pe-md-0" href="#"><img id="logo-white" class="ps-md-5 position-absolute z-1" src="/public/assets/img/White_logo.png" alt="logo CKJN light"><img class="ps-md-5 position-relative" id="navbar__logo--dark" src="/public/assets/img/Black_logo.png" alt="logo CKJN dark"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,24 +33,29 @@
                 <ul class="navbar-nav">
                     <div id="navbar__main-div">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Continent 1</a>
+                            <a class="nav-link active navbar__text" href="#">Continent 1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Continent 2</a>
+                            <a class="nav-link active navbar__text" href="#">Continent 2</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Continent 3</a>
+                            <a class="nav-link active navbar__text" href="#">Continent 3</a>
                         </li>
                     </div>
                     <div id="navbar__btn-div">
                         <li class="nav-item">
-                            <button type="button" class="btn btn-secondary"><a class="nav-link" href="#">Paramètres<i class="fa-solid fa-gears pe-0"></i></a></button>
+                            <button type="button" class="btn btn-secondary" id="navbar__btn"><a class="nav-link" href="#">Paramètres<i class="fa-solid fa-gears pe-0"></i></a></button>
                         </li>
                     </div>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- DARKMODE -->
+    <div id="btn-darkmode">
+        <label class="form-check-label" for="switch" name="switch">Mode nuit</label>
+        <input class="form-check-input d-none" type="checkbox" id="switch" role="switch">
+    </div>
 </header>
 
 <main>
