@@ -5,14 +5,13 @@
 }
 
 main{
-    /* background-image: url('/public/assets/img/Capture\ d’écran\ 2023-11-29\ à\ 09.29.16.png'); */
     min-height: 100vh;
     background-image: linear-gradient(339deg, rgba(47, 47, 47,0.02) 0%, rgba(47, 47, 47,0.02) 42%,transparent 42%, transparent 99%,rgba(17, 17, 17,0.02) 99%, rgba(17, 17, 17,0.02) 100%),linear-gradient(257deg, rgba(65, 65, 65,0.02) 0%, rgba(65, 65, 65,0.02) 11%,transparent 11%, transparent 92%,rgba(53, 53, 53,0.02) 92%, rgba(53, 53, 53,0.02) 100%),linear-gradient(191deg, rgba(5, 5, 5,0.02) 0%, rgba(5, 5, 5,0.02) 1%,transparent 1%, transparent 45%,rgba(19, 19, 19,0.02) 45%, rgba(19, 19, 19,0.02) 100%),linear-gradient(29deg, rgba(28, 28, 28,0.02) 0%, rgba(28, 28, 28,0.02) 33%,transparent 33%, transparent 40%,rgba(220, 220, 220,0.02) 40%, rgba(220, 220, 220,0.02) 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
 }
 
 
 /* ! NAVBAR */
-#navbar__main-div{
+#navbar__main-div{ /* continents */
     width: 60vw;
     display: flex;
     justify-content: center;
@@ -50,7 +49,14 @@ main{
 #navbar__main-div li{ /* continents */
     padding: 0 15px;
     margin-top: 6px;
-    font-family: 'Lato', sans-serif;
+}
+#navbar__main-div li a{ /* continents */
+    color: #737373;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 2px;
 }
 .navbar button:first-child{ /* bouton paramètres */
     background-color: #4767BD;
@@ -60,12 +66,76 @@ main{
     color: #FFF !important;
 }
 
-/* ! main cards */
+/* ! main */
+#main__pic{
+    background-image: url('/public/assets/img/exemplaires du journal Le Monde.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 60%;
+    height: 60vh;
+    /* mix-blend-mode: luminosity; */
+}
+#overlay{
+    height: 100%;
+    background-color: rgba(71, 103, 189, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    text-transform: uppercase;
+    color: #FFF !important;
+    font-size: 4em !important;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+}
 h1, h5{
     font-family: 'Lato', sans-serif;
 }
 .card p, .card a{
     font-family: 'Roboto', sans-serif;
 }
+.card .btn{
+    background-color: #4767BD;
+}
+
+/* ! footer */
+footer{
+    min-height: 30vh;
+    background-color: #FFF;
+}
+#footer__logo{
+    height: 80px;
+}
+#footer__logos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+i{
+    color: #4767BD;
+    padding: 0 10px;
+}
+footer h5{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #737373;
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+.footer__links{
+    color: #737373;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+}
+@media (min-width: 990px) {
+    #footer__logosreaseaux--desktop{
+        width: 500px;
+        text-align: center;
+    }
+}
+
 
 /********************************/
