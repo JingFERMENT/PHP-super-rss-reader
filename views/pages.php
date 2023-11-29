@@ -1,7 +1,4 @@
 <?php
-require_once __DIR__ . '/../controllers/pages-ctrl.php';
-// $title - $formattedDate - $description - $link - $imageUrl
-
 for ($i = 0; $i < $maxArticles && $i < count($items); $i++) {
     $item = $items[$i];
     $title = $item->title;
@@ -21,7 +18,7 @@ for ($i = 0; $i < $maxArticles && $i < count($items); $i++) {
     // $title - $formattedDate - $description - $link - $imageUrl
 ?>
     <div class="card" style="width: 18rem;">
-        <img src="<?= $imageUrl ?>" class="card-img-top" alt="...">
+        <img src="<?= $imageUrl ?>" class="card-img-top img-fluid" alt="...">
         <div class="card-body">
             <h5 class="card-title"><?= $title ?></h5>
             <p><?= $formattedDate ?></p>
