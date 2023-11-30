@@ -32,15 +32,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <div id="navbar__main-div">
+                    <?php
+                    foreach ($urlsRss as $key => $value) {
+                        if (in_array($value, $selectedTopics)) { ?>
+
                         <li class="nav-item">
-                            <a class="nav-link active navbar__text" href="#">Continent 1</a>
+                            <a class="nav-link active navbar__text" href="./pages-ctrl.php/<?= $value ?>"><?= $value ?? '' ?></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active navbar__text" href="#">Continent 2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active navbar__text" href="#">Continent 3</a>
-                        </li>
+
+                    <?php }
+                    }
+                    ?>
                     </div>
                     <div id="navbar__btn-div">
                         <li class="nav-item">
