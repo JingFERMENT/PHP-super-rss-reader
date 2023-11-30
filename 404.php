@@ -37,7 +37,7 @@
                 <div class="card card-body text-center p-5">
                     <h1 class="fw-bold">Erreur 404</h1>
                     <h4 class="mb-5">La page que vous recherchez n'a pas été trouvée.</h4>
-                    <button type="button" class="btn btn-secondary" id="navbar__btn"><a class="nav-link" href="/controllers/home-ctrl.php">Retour à l'accueil<i class="fa-solid fa-gears pe-0"></i></a></button>
+                    <button type="button" class="btn btn-secondary" id="navbar__btn"><a class="nav-link" href="index.php">Retour à l'accueil<i class="fa-solid fa-gears pe-0"></i></a></button>
                 </div>
             </div>
         </div>

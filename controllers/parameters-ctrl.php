@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // INPUT selectedTopics "Selectionnez vos sujets"
     $selectedTopics = filter_input(INPUT_POST, 'selectedTopics', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
 
-    if (empty($selectedTopics) || count($selectedTopics) !== 3) {
+    if (empty($selectedTopics) || count($selectedTopics) > 3) {
         $error['selectedTopics'] = "Merci de sélectionner 3 sujets.";
     } else {
         foreach ($selectedTopics as $value) {
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (empty($error)) {
         // Si aucune erreur dans mon formulaire je renvoie sur la page "home"
-        header('location: ./home-ctrl.php');
+        header('location: ./accueil.html');
     }
 
 }

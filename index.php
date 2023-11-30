@@ -1,3 +1,3 @@
 <?php
-    header('location: __DIR__./../controllers/home-ctrl.php');
+    header('location: /accueil.html');
     die;

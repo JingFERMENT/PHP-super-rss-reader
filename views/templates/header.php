@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,48 +22,55 @@
 
 
 <body class="light">
-<header>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-body-light sticky-top">
-        <div class="container-fluid d-flex justify-content-center">
+    <header>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg bg-body-light sticky-top">
+            <div class="container-fluid d-flex justify-content-center">
                 <a class="navbar-brand ps-md-5 ms-md-4 pe-5 pe-md-0" href="/index.php"><img id="logo-white" class="ps-md-5 position-absolute z-1" src="/public/assets/img/White_logo.png" alt="logo CKJN light"><img class="ps-md-5 position-relative" id="navbar__logo--dark" src="/public/assets/img/Black_logo.png" alt="logo CKJN dark"></a>
                 <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <div id="navbar__main-div">
-                    <?php
-                    foreach ($urlsRss as $key => $value) {
-                        if (in_array($value, $selectedTopics)) { ?>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <div id="navbar__main-div">
+                            <?php
+                            $count = 0;
+                            foreach ($urlsRss as $key => $value) {
+                                if (in_array($value, $selectedTopics)) { ?>
 
-                        <li class="nav-item">
-                        <a class="nav-link active navbar__text" href="/controllers/pages-ctrl.php?continent=<?= $value ?>"><?= $value ?? '' ?></a>
-                        </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active navbar__text" href="/theme-<?= $value ?>.html"><?= $value ?? '' ?></a>
+                                    </li>
+                            <?php 
+                            $count++;
+                            if ($count == 3) {
+                            break; // Sortir de la boucle après trois éléments
+                            }?>
+                                    
 
-                    <?php }
-                    }
-                    ?>
-                    </div>
-                    <div id="navbar__btn-div">
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-secondary" id="navbar__btn"><a class="nav-link" href="/controllers/parameters-ctrl.php">Paramètres<i class="fa-solid fa-gears pe-0"></i></a></button>
-                        </li>
-                    </div>
-                </ul>
+                            <?php }
+                            }
+                            ?>
+                        </div>
+                        <div id="navbar__btn-div">
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-secondary" id="navbar__btn"><a class="nav-link" href="/parametre.html">Paramètres<i class="fa-solid fa-gears pe-0"></i></a></button>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <!-- DARKMODE -->
-    <!-- <div id="btn-darkmode">
+        </nav>
+        <!-- DARKMODE -->
+        <!-- <div id="btn-darkmode">
         <label class="form-check-label" for="switch" name="switch">Mode nuit</label>
         <input class="form-check-input d-none" type="checkbox" id="switch" role="switch">
     </div> -->
-</header>
+    </header>
 
-<main>
+    <main>
 
 
-<!-- ----------------------------------- -->
-<!-- ------------BRANCH HOME------------ -->
-<!-- ----------------------------------- -->
+        <!-- ----------------------------------- -->
+        <!-- ------------BRANCH HOME------------ -->
+        <!-- ----------------------------------- -->
