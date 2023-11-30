@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>My RSS Feed</title>
     <!-- style -->
     <link rel="stylesheet" href="../public/assets/css/style.css">
     <!-- bootstrap -->
@@ -44,7 +44,7 @@
                     </div>
                     <div id="navbar__btn-div">
                         <li class="nav-item">
-                            <button type="button" class="btn btn-secondary" id="navbar__btn"><a class="nav-link" href="#">Paramètres<i class="fa-solid fa-gears pe-0"></i></a></button>
+                            <button type="button" class="btn btn-secondary" id="navbar__btn"><a class="nav-link" href="/controllers/parameters-ctrl.php">Paramètres<i class="fa-solid fa-gears pe-0"></i></a></button>
                         </li>
                     </div>
                 </ul>
@@ -52,10 +52,10 @@
         </div>
     </nav>
     <!-- DARKMODE -->
-    <div id="btn-darkmode">
+    <!-- <div id="btn-darkmode">
         <label class="form-check-label" for="switch" name="switch">Mode nuit</label>
         <input class="form-check-input d-none" type="checkbox" id="switch" role="switch">
-    </div>
+    </div> -->
 </header>
 
 <main>
