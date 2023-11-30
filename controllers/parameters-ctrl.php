@@ -2,17 +2,7 @@
 define('TOPICS', ['Europe', 'Ameriques', 'Afrique', 'Asie-Pacifique', 'Proche-Orient']);
 define('ITEMS', ['6', '9', '12']);
 
-if ($_COOKIE['designMode'] == true) {
-    $designMode = $_COOKIE['designMode'];
-}
-
-if ($_COOKIE['numberItems'] == true) {
-    $numberItems = $_COOKIE['numberItems'];
-}
-
-if ($_COOKIE['selectedTopics'] == true) {
-    $selectedTopics = json_decode($_COOKIE['selectedTopics']);
-}
+require_once __DIR__ . '/../config/init.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -78,4 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
 }
+
+include __DIR__.'/../views/templates/header.php';
 include __DIR__ . '/../views/parameters.php';
+include __DIR__.'/../views/templates/footer.php';
