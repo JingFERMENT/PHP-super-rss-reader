@@ -9,7 +9,7 @@
     </div>
 </section>
 <section>
-    <div class="container">
+    <div class="container py-5">
         <div class="row">
 
 
@@ -18,7 +18,8 @@
                 $rss = simplexml_load_file($key);
                 if (in_array($value, $selectedTopics)) { ?>
                     <div class="col col-md-4 pt-5 d-flex flex-wrap justify-content-center">
-                        <?php echo '<h3>' . $value . '</h3><br>';
+                        <h3 class="mb-4"><a class="text-decoration-none" href="/controllers/pages-ctrl.php?continent=<?= $value ?>"><?=$value?></a></h3>
+                        <?php 
                         $items = $rss->channel->item;
                         
 
@@ -28,10 +29,10 @@
                             // Récupération et affichage de l'image (si présente)
                             $imageUrl = $item->children($item->getNameSpaces(true)['media'])->content->attributes()->url; ?>
 
-                            <div class="card mb-5">
+                            <div class="card mb-3">
                                 <img src="<?= $imageUrl ?>" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?= $item->title ?></h5>
+                                    <h5 class="card-title text-truncate fw-bold"><?= $item->title ?></h5>
                                 </div>
                             </div>
 
