@@ -7,11 +7,12 @@
         <h2 class="text-center">Zoom sur Continent 1</h2>
     </div>
 </section>
+
 <section>
     <div class="container">
         <div class="row">
             <?php
-            for ($i = 0; $i < $maxArticles && $i < count($items); $i++) {
+            for ($i = 0; $i < $numberItems && $i < count($items); $i++) {
                 $item = $items[$i];
                 $title = $item->title;
                 $link = $item->link;
@@ -29,8 +30,8 @@
                 // Affichage des informations
                 // $title - $formattedDate - $description - $link - $imageUrl
             ?>
-                <div class="col col-lg-3 pt-5 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
+                <div class="col col-lg-4 pt-5 d-flex justify-content-center">
+                    <div class="card" >
                         <img src="<?= $imageUrl ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><?= $title ?></h5>
@@ -38,12 +39,9 @@
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><?= $formattedDate ?></li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
                         </ul>
                         <div class="card-body">
-                            <a href="<?= $title ?>" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                            <a href="<?= $link ?>" class="card-link" target="_blank">Lire l'article</a>
                         </div>
                     </div>
                 </div>

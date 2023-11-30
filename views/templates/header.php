@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My RSS Feed</title>
     <!-- style -->
-    <link rel="stylesheet" href="../public/assets/css/style.css">
+    <link rel="stylesheet" href="../public/assets/css/style.css" type="text/css">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- google fonts -->
@@ -37,7 +37,7 @@
                         if (in_array($value, $selectedTopics)) { ?>
 
                         <li class="nav-item">
-                            <a class="nav-link active navbar__text" href="./pages-ctrl.php/<?= $value ?>"><?= $value ?? '' ?></a>
+                            <a class="nav-link active navbar__text" href="/controllers/pages-ctrl.php?continent=<?= $value ?>"><?= $value ?? '' ?></a>
                         </li>
 
                     <?php }
