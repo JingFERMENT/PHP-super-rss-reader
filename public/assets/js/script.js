@@ -4,8 +4,9 @@
 
 
 
-// ! variables
-const darkmodeBtn = document.getElementById('btn-darkmode'); // bouton pour basculer entre les modes
+// ! variables 
+// const darkmodeBtn = document.getElementById('btn-darkmode'); // bouton pour basculer entre les modes
+// const darkmodeBtn = document.getElementById('designMode');
 // console.log(darkmodeBtn);
 const body = document.querySelector("body"); // body pour lui modifier la class au click
 // console.log(body);
