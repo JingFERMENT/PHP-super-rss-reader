@@ -1,6 +1,7 @@
 <?php
 
-include './views/templates/header.php' ?>
+include './views/templates/header.php' ;
+require_once __DIR__ . '/../config/init.php'?>
 
 <div class="py-5 " id="errorPage">
     <div class="container">
