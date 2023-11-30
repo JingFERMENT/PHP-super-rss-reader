@@ -5,10 +5,14 @@ if ($_COOKIE['designMode'] == true) {
 
 if ($_COOKIE['numberItems'] == true) {
     $numberItems = $_COOKIE['numberItems'];
+} else {
+    $designMode = '';
 }
 
 if ($_COOKIE['selectedTopics'] == true) {
     $selectedTopics = json_decode($_COOKIE['selectedTopics']);
+} else {
+    $designMode = '';
 }
 
 $urlsRss = [
