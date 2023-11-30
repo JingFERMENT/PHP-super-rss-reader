@@ -52,10 +52,9 @@
         </div>
     </nav>
     <!-- DARKMODE -->
-    <!-- <div id="btn-darkmode">
-        <label class="form-check-label" for="switch" name="switch">Mode nuit</label>
-        <input class="form-check-input d-none" type="checkbox" id="switch" role="switch">
-    </div> -->
+    <div id="btn-darkmode">
+        Go dark
+    </div>
 </header>
 
 <main>

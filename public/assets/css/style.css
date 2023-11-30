@@ -176,14 +176,24 @@ footer h5{
 
 /* ! dark mode */
 #btn-darkmode{
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background-color: #fff;
     position: absolute;
     top: 120px;
     right: 20px;
-    /* cursor: pointer !important; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 body.dark{ /* ! quand le body a la class dark */
     background-color: #000 !important;
     color: #fff !important;
+}
+body.dark #btn-darkmode{
+    background-color: #282828;
 }
 body.dark .navbar__text{
     color: #fff !important;
