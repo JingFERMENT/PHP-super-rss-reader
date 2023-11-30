@@ -9,7 +9,8 @@
     <div class="container">
         <div class="row pt-5 test"> <!-- logos -->
             <div class="col ps-md-5 ms-md-5" id="footer__logo--desktop">
-                <img class="ps-md-5 ms-md-5 position-absolute z-1" id="footer__logo" src="/public/assets/img/White_logo.png" alt="logo CKJN light"><img class="ps-md-5 ms-md-5 position-relative" id="footer__logo--dark" src="/public/assets/img/Black_logo.png" alt="logo CKJN dark">
+            <a href="/index.php"><img class="ps-md-5 ms-md-5 position-absolute z-1" id="footer__logo" src="/public/assets/img/White_logo.png" alt="logo CKJN light"></a>
+            <a href="/index.php"><img class="ps-md-5 ms-md-5 position-relative" id="footer__logo--dark" src="/public/assets/img/Black_logo.png" alt="logo CKJN dark"></a>
             </div>
             <div class="col  ps-lg-5" id="footer__logos">
                 <div>
