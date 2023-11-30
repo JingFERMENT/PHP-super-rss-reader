@@ -10,7 +10,7 @@
 
 <body>
     <div class="row justify-content-center">
-        <div class="col-lg-6">
+        <div class="col-lg-5">
             <div class="card">
                 <div class="card-body">
                     <form method="POST" class="p-5">
@@ -19,8 +19,8 @@
                         <div class="mb-5">
                             <label for="designMode" class="mb-3 fw-bold">Choix du design</label>
                             <select id="designMode" name="designMode" class="form-select">
-                                <option value="0" <?= (isset($designMode) && $designMode == 0) ? 'selected' : '' ?>>Mode Light</option>
-                                <option value="1" <?= (isset($designMode) && $designMode == 1) ? 'selected' : '' ?>>Mode Dark</option>
+                                <option value="1" <?= (isset($designMode) && $designMode == 1) ? 'selected' : '' ?>>Mode Light</option>
+                                <option value="2" <?= (isset($designMode) && $designMode == 2) ? 'selected' : '' ?>>Mode Dark</option>
                             </select>
                             <small class="form-text text-danger"><?= $error['designMode'] ?? '' ?></small>
                         </div>

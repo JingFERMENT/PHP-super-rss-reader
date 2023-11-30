@@ -20,11 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $error = [];
 
     // SELECT Mode Light/Dark
-    $designMode = intval(filter_input(INPUT_POST, 'designMode', FILTER_SANITIZE_NUMBER_INT));
+    $designMode = (filter_input(INPUT_POST, 'designMode', FILTER_SANITIZE_NUMBER_INT));
     if (empty($designMode)) {
         $error['designMode'] = "Merci de sélectionner un mode à afficher";
     } else {
-        $isOk = filter_var($designMode, FILTER_VALIDATE_INT, array("options" => array("min_range" => 0, "max_range" => 1)));
+        $isOk = filter_var($designMode, FILTER_VALIDATE_INT, array("options" => array("min_range" => 1, "max_range" => 2)));
         if (!$isOk) {
             $error["designMode"] = "La sélection n'est pas valide";
         }
