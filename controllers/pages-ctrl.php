@@ -1,3 +1,7 @@
+=======================================================
+================ pages branch =========================
+=======================================================
+
 <?php
 // L'URL du flux RSS à lire
 $url = 'https://www.lemonde.fr/europe/rss_full.xml';
@@ -10,3 +14,7 @@ $maxArticles = 6;
 include __DIR__ . '/../views/templates/header.php';
 include __DIR__ . '/../views/pages.php';
 include __DIR__ . '/../views/templates/footer.php';
+?>
+=======================================================
+================ pages branch =========================
+=======================================================
