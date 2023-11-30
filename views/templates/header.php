@@ -37,7 +37,7 @@
                         if (in_array($value, $selectedTopics)) { ?>
 
                         <li class="nav-item">
-                            <a class="nav-link active navbar__text" href="./pages-ctrl.php/"><?= $value ?? '' ?></a>
+                        <a class="nav-link active navbar__text" href="/controllers/pages-ctrl.php?continent=<?= $value ?>"><?= $value ?? '' ?></a>
                         </li>
 
                     <?php }

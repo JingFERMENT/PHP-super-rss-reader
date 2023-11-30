@@ -9,8 +9,8 @@ RewriteEngine on
 #--------------------------------------------------
 
 # Sujet avec numéro de page :
-RewriteRule ^accueil.html$          /controllers/home-ctrl.php[L] 
-RewriteRule ^parametre.html$        /controllers/parameters-ctrl.php[L]   
-RewriteRule ^sujet([0-9]+).html$    /controllers/pages-ctrl.php?id=$2[L]
+RewriteRule ^accueil.html$          /controllers/home-ctrl.php
+RewriteRule ^parametre.html$        /controllers/parameters-ctrl.php   
+RewriteRule ^theme([0-9]+).html$    /controllers/pages-ctrl.php?continent=$2
 
 ErrorDocument 404 /404.php

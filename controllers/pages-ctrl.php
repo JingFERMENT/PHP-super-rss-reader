@@ -1,13 +1,34 @@
+<!-- ==================================================
+================ pages branch =========================
+======================================================= -->
 <?php
 
 require_once __DIR__ . '/../config/init.php';
 
-foreach ($urlsRss as $key => $value) {
-    if (in_array($value, $selectedTopics)) {
-        $rss = simplexml_load_file($key);
-    }
+
+$continent = "";
+if (!empty($_GET['continent'])) {
+    $continent = $_GET['continent'];
 }
 
-include __DIR__.'/../views/templates/header.php';
-include __DIR__.'/../views/pages.php';
-include __DIR__.'/../views/templates/footer.php';
+$fluxRssUrl = null;
+
+foreach ($urlsRss as $url => $region) {
+    if ($continent === $region) {
+        $fluxRssUrl = $url;
+        break;
+    }
+}
+$counter = 0;
+
+// L'URL du flux RSS à lire
+
+// Chargement du flux RSS avec SimpleXML
+// simplexml_load_file — Convertit un fichier XML en objet
+$rss = simplexml_load_file($url);
+$items = $rss->channel->item;
+// Variable pour le réglage de l'affichage
+
+include __DIR__ . '/../views/templates/header.php';
+include __DIR__ . '/../views/pages.php';
+include __DIR__ . '/../views/templates/footer.php';
