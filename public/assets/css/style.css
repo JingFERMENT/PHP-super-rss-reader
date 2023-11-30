@@ -176,17 +176,18 @@ footer h5{
 
 /* ! dark mode */
 #btn-darkmode{
-    border-radius: 50%;
+    /* border-radius: 50%;
     height: 80px;
     width: 80px;
     background-color: #fff;
     position: absolute;
-    top: 120px;
+    z-index: 199;
+    top: 20px;
     right: 20px;
     cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 body.dark{ /* ! quand le body a la class dark */
     background-color: #000 !important;
@@ -229,7 +230,9 @@ body.dark .card li{
     color: #fff !important;
     border: 1px solid #000;
 }
-
+body.dark form{
+    color: #fff;
+}
 /* <!-- -------------------------------- -->
 <!-- ------------BRANCH HOME------------ -->
 <!-- ----------------------------------- --> */

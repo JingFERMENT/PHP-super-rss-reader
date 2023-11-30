@@ -53,10 +53,8 @@
             </div>
         </div>
     </nav>
-    <!-- DARKMODE -->
-    <div id="btn-darkmode">
-        Go dark
-    </div>
+
+
 </header>
 
 <main>
