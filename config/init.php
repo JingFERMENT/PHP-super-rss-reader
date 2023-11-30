@@ -1,18 +1,20 @@
 <?php
-if ($_COOKIE['designMode'] == true) {
+if (isset($_COOKIE['designMode']) && $_COOKIE['designMode'] == true) {
     $designMode = $_COOKIE['designMode'];
+} else {
+    $designMode = 1;
 }
 
-if ($_COOKIE['numberItems'] == true) {
+if (isset($_COOKIE['numberItems']) && $_COOKIE['numberItems'] == true) {
     $numberItems = $_COOKIE['numberItems'];
 } else {
-    $designMode = '';
+    $numberItems = 6;
 }
 
-if ($_COOKIE['selectedTopics'] == true) {
+if (isset($_COOKIE['selectedTopics']) && $_COOKIE['selectedTopics'] == true) {
     $selectedTopics = json_decode($_COOKIE['selectedTopics']);
 } else {
-    $designMode = '';
+    $selectedTopics = ['Europe','Ameriques','Afrique'];
 }
 
 $urlsRss = [

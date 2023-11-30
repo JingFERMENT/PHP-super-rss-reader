@@ -1,13 +1,13 @@
 <?php
 
-include './views/templates.php/header.php' ?>
+include './views/templates/header.php' ?>
 
 <div class="py-5 " id="errorPage">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-7">
                 <div class="card card-body tex-center">
-                    <h2>Erreur 404</h2>
+                    <h2 class="text-center">Erreur 404</h2>
                     <h4>La page que vous recherchez n'a pas été trouvée.</h4>
                 </div>
             </div>
@@ -17,6 +17,6 @@ include './views/templates.php/header.php' ?>
 
 <?php
 
-include './views/templates.php/footer.php'
+include './views/templates/footer.php'
 
 ?>
