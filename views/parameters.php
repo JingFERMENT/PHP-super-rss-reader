@@ -17,7 +17,9 @@
 
                         <!-- INPUT Radio Nombre d’articles -->
                         <div class="mb-5">
-                            <label class="mb-3 fw-bold">Nombre d’articles affichés sur la page d’accueil et sur les pages complètes : </label>
+                            <div>
+                            <label class="mb-3 fw-bold">Nombre d’articles à afficher par thème : </label>
+                            </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" id="6" name="numberItems" value="6" <?= (isset($numberItems) && $numberItems == 6) ? 'checked' : '' ?>>
                                 <label class="form-check-label" for="6">6</label>
@@ -35,7 +37,7 @@
 
                         <!-- INPUT Checkbox Sujet -->
                         <div class="mb-5">
-                            <label class="mb-3 fw-bold">Selectionnez vos sujets <small class="fw-light">(3 sujets maximum)</small> : </label>
+                            <label class="mb-3 fw-bold">Sélectionnez vos thèmes <small class="fw-light">(3 thèmes maximum)</small> : </label>
                             <?php
                             foreach (TOPICS as $value) {
                             ?>

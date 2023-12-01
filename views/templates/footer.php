@@ -1,8 +1,3 @@
-<!-- ----------------------------------- -->
-<!-- ------------BRANCH HOME------------ -->
-<!-- ----------------------------------- -->
-
-
 </main>
 
 <footer>
@@ -17,9 +12,9 @@
                     <h5>Suivez-nous !</h5>
                 </div>
                 <div id="footer__logosreaseaux--desktop">
-                    <i class="fa-brands fa-x-twitter fa-2xl"></i>
-                    <i class="fa-brands fa-youtube fa-2xl"></i>
-                    <i class="fa-brands fa-facebook-f fa-2xl"></i>
+                    <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube fa-2xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f fa-2xl"></i></a>
                 </div>
             </div>
         </div>
@@ -32,8 +27,6 @@
     </div>
 </footer>
 
-
-
     <!-- script JS -->
     <script src="/public/assets/js/script.js"></script>
     <!--* font awesome -->
@@ -42,8 +35,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-<!-- ----------------------------------- -->
-<!-- ------------BRANCH HOME------------ -->
-<!-- ----------------------------------- -->

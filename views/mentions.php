@@ -1,7 +1,7 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12 mt-5">
-            <div class="jumbotron m-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="m-5">
                 <h1>
                     Mentions légales
                 </h1>

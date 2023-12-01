@@ -1,8 +1,3 @@
-<!-- ----------------------------------- -->
-<!-- ------------BRANCH HOME------------ -->
-<!-- ----------------------------------- -->
-
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -35,20 +30,24 @@
                         <div id="navbar__main-div">
                             <?php
                             $count = 0;
-                            foreach ($urlsRss as $key => $value) {
-                                if (in_array($value, $selectedTopics)) { ?>
+                            if ($selectedTopics == 0) { ?>
+                                <li class="nav-item">
+                                    <a class="nav-link active navbar__text" href=""></a>
+                                </li>
+                                <?php } else {
+                                foreach ($urlsRss as $key => $value) {
+                                    if (in_array($value, $selectedTopics)) { ?>
 
-                                    <li class="nav-item">
-                                        <a class="nav-link active navbar__text" href="/theme-<?= $value ?>.html"><?= $value ?? '' ?></a>
-                                    </li>
-                            <?php 
-                            $count++;
-                            if ($count == 3) {
-                            break; // Sortir de la boucle après trois éléments
-                            }?>
-                                    
-
+                                        <li class="nav-item">
+                                            <a class="nav-link active navbar__text" href="/theme-<?= $value ?>.html"><?= $value ?? '' ?></a>
+                                        </li>
+                                        <?php
+                                        $count++;
+                                        if ($count == 3) {
+                                            break; // Sortir de la boucle après trois éléments
+                                        } ?>
                             <?php }
+                                }
                             }
                             ?>
                         </div>
@@ -61,16 +60,5 @@
                 </div>
             </div>
         </nav>
-        <!-- DARKMODE -->
-        <!-- <div id="btn-darkmode">
-        <label class="form-check-label" for="switch" name="switch">Mode nuit</label>
-        <input class="form-check-input d-none" type="checkbox" id="switch" role="switch">
-    </div> -->
     </header>
-
     <main>
-
-
-        <!-- ----------------------------------- -->
-        <!-- ------------BRANCH HOME------------ -->
-        <!-- ----------------------------------- -->

@@ -12,7 +12,6 @@ $counter = 0;
 
 session_start();
 
-// Vérifie si la session "popupAffichee" existe
 if (!isset($_SESSION['popup'])) {
     // Si la session n'existe pas, affiche la pop-up
     $_SESSION['popup'] = true;
