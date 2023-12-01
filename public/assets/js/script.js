@@ -3,7 +3,6 @@
 <!-- ----------------------------------- --> */
 
 
-
 // ! variables 
 // const darkmodeBtn = document.getElementById('btn-darkmode'); // bouton pour basculer entre les modes
 // const darkmodeBtn = document.getElementById('designMode');

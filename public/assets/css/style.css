@@ -84,7 +84,7 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 60%;
-    height: 60vh;
+    height: 40vh;
 }
 #overlay{
     height: 100%;
@@ -218,6 +218,32 @@ body.dark .card li{
     background-color: #282828 !important;
     color: #fff !important;
     border: 1px solid #000;
+}
+
+
+.popup {
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    transition: all 1s ease-in-out;
+    z-index: 1050;
+}
+@media (min-width: 990px) {
+    .popup {
+        top: 8rem;
+        width: 60%;
+    }
+}
+
+.popup h3 {
+    color: #4767BD;
+}
+
+.popup .btn-primary {
+    background-color: #4767BD;
 }
 
 /* <!-- -------------------------------- -->
