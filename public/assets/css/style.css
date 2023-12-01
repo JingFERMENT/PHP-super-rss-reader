@@ -220,6 +220,9 @@ body.dark form{
     color: #fff;
 }
 
+body.dark .card-footer {
+    background-color: #282828;
+}
 .popup {
     position: fixed;
     top: 3rem;
