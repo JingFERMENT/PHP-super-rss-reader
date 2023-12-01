@@ -6,6 +6,8 @@ const footerLogo = document.getElementById("footer__logo");
 const selectMode = document.getElementById("designMode");
 const lightMode = document.getElementById("light-mode");
 const darkMode = document.getElementById("dark-mode");
+const darkModeBurger = document.querySelector('.text-black');
+const lightModeBurger = document.querySelector('.text-white');
 
 // ! fonctions
 
@@ -32,12 +34,16 @@ function getDarkMode() {
     body.classList.remove("light"); // class de base dans le body
     headerLogo.classList.add("d-none"); // modification des logos
     footerLogo.classList.add("d-none");
+    darkModeBurger.classList.add("d-none");
+    lightModeBurger.classList.remove("d-none");
 }
 function getLightMode() {
     body.classList.add("light");
     body.classList.remove("dark");
     headerLogo.classList.remove("d-none");
     footerLogo.classList.remove("d-none");
+    darkModeBurger.classList.remove("d-none");
+    lightModeBurger.classList.add("d-none");
 }
 
 // * appliquer le changement de mode sur toutes les pages avec le cookie
