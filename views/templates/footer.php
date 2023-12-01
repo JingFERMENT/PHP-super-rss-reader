@@ -25,7 +25,7 @@
         </div>
         <div class="row pt-5 text-center"> <!-- mentions légales -->
             <div class="col">
-                <a href="#" class="pe-2 footer__links">Mentions légales</a>
+                <a href="/mentionslegales.html" class="pe-2 footer__links">Mentions légales</a>
                 <a href="#" class="footer__links">Politique de confidentialité</a>
             </div>
         </div>
