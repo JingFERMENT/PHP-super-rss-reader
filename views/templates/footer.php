@@ -34,8 +34,8 @@
 
 
 
-    <!-- script JS -->
-    <script src="/public/assets/js/script.js"></script>
+        <!-- script JS -->
+        <script src="/public/assets/js/script.js"></script>
     <!--* font awesome -->
     <script src="https://kit.fontawesome.com/dce61209e7.js" crossorigin="anonymous"></script>
     <!-- script bootstrap -->

@@ -9,8 +9,8 @@
                         <div class="mb-5">
                             <label for="designMode" class="mb-3 fw-bold">Choix du design</label>
                             <select id="designMode" name="designMode" class="form-select">
-                                <option autofocus id="light-mode" class="darkmodeChoice" data-darkmode="1" value="1" <?= (isset($designMode) && $designMode == 1) ? 'selected' : '' ?>>Mode Light</option>
-                                <option id="dark-mode" class="darkmodeChoice" data-darkmode="2" value="2" <?= (isset($designMode) && $designMode == 2) ? 'selected' : '' ?>>Mode Dark</option>
+                                <option autofocus id="light-mode" data-darkmode="1" value="1" <?= (isset($designMode) && $designMode == 1) ? 'selected' : '' ?>>Mode Light</option>
+                                <option id="dark-mode" data-darkmode="2" value="2" <?= (isset($designMode) && $designMode == 2) ? 'selected' : '' ?>>Mode Dark</option>
                             </select>
                             <small class="form-text text-danger"><?= $error['designMode'] ?? '' ?></small>
                         </div>
