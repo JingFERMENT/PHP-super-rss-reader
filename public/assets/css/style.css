@@ -106,9 +106,13 @@ h1, h5{
 .card p, .card a{
     font-family: 'Roboto', sans-serif;
 }
-.card .btn{
+.card .btn {
     background-color: #4767BD;
     border: none;
+}
+
+#continent-title {
+    color: #4767BD;
 }
 
 /* ! footer */

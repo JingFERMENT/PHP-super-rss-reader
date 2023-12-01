@@ -18,7 +18,7 @@
                 $rss = simplexml_load_file($key);
                 if (in_array($value, $selectedTopics)) { ?>
                     <div class="col col-md-4 pt-5 d-flex flex-wrap justify-content-center">
-                        <h3 class="mb-4"><a class="text-decoration-none" href="/controllers/pages-ctrl.php?continent=<?= $value ?>"><?=$value?></a></h3>
+                        <h3 class="mb-4" ><a id="continent-title" class="text-decoration-none" href="/controllers/pages-ctrl.php?continent=<?= $value ?>"><?=$value?></a></h3>
                         <?php 
                         $items = $rss->channel->item;
                         
