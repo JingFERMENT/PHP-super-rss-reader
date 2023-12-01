@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My RSS Feed</title>
+    <meta name = "description" content = "Lecteur de flux RSS. Actualités mises à jour depuis le journal Le Monde. Retrouvez tout l'essentiel sur une page">
+    <title>CKJN Global News - Actualités internationales - Lecteur de flux RSS - Mises à jour quotidiennes</title>
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
