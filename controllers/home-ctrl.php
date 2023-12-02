@@ -10,6 +10,16 @@ foreach ($urlsRss as $key => $value) {
 }
 $counter = 0;
 
+session_start();
+
+if (!isset($_SESSION['popup'])) {
+    // Si la session n'existe pas, affiche la pop-up
+    $_SESSION['popup'] = true;
+    $popup = true;
+} else {
+    $popup = false;
+}
+
 
 include __DIR__.'/../views/templates/header.php';
 include __DIR__.'/../views/home.php';
